@@ -29,7 +29,6 @@ Piece of code that does one task without maintaining VMs.
 ### Virtual network (VNet)
 The most fundamental part of Azure and connects all resources.
 
-
 ## 5. Storage
 
 ## 6. Database
