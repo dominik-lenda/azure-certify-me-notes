@@ -29,6 +29,21 @@ Piece of code that does one task without maintaining VMs.
 ### Virtual network (VNet)
 The most fundamental part of Azure and connects all resources.
 
+### Load Balancer
+Load Balancer distributes network traffic across resources or servers. 
+
+### VPN Gateways
+VPN Gateway is a specific VNet Gateway that securely connects Azure resources
+and on-premise networks.
+
+### Application Gateway
+Application Gateway is a type of load balancer with multiple additional features and works on the HTTP request of the traffic instead of the IP address and port.
+
+### Content Delivery Network (CDN)
+CDN is a distributed network of servers that speeds up the Internet by keeping content in locations closer to a user.
+
+### ExpressRoute
+ExpressRoute is a private and fast connection between Azure and on-premise networks. It does not go through the Internet.
 ## 5. Storage
 
 ## 6. Database
