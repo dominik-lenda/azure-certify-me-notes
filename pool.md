@@ -45,6 +45,42 @@ CDN is a distributed network of servers that speeds up the Internet by keeping c
 ### ExpressRoute
 ExpressRoute is a private and fast connection between Azure and on-premise networks. It does not go through the Internet.
 ## 5. Storage
+### Intro
+- Blob
+- Disk 
+- File
+- Archive
+
+### Blob
+Storage Account - unique Azure namespace
+
+Storage Levels: storage account -> conainers -> Blobs
+
+Blob storage is a mix of items:
+- images
+- video
+- log files
+- data store (backup, restore, archives)
+
+Three types of blobs:
+1. Block - text and binary data up to 4.7 TB; managed individually
+2. Append - optimized for append operations; logging data for VMs
+3. Page blobs - up to 8TB
+
+Pricing tiers:
+- Hot 
+- Cool
+- Archive
+
+### Disk
+Disk that is managed by VM
+
+Types:
+- HDD for backups
+- SSD standard for production
+- Premium SSD better than standard
+- Ultra Disk for most demanding apps,
+extremely scalable, up to 64TB
 
 ## 6. Database
 
