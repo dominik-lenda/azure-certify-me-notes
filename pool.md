@@ -82,6 +82,27 @@ Types:
 - Ultra Disk for most demanding apps,
 extremely scalable, up to 64TB
 
+### File
+File storage account benefits
+- easy sharing
+- managed hardware and OS
+- resilient to network issues
+
+Useful scenarios for using file storage:
+- hybric - supplement or replace existing on-premise 
+file storage
+- lift and shift - move existing file storages and related services to Azure
+
+### Archive
+Overview:
+- lowest price
+- durable, encrypted, stable
+- perfect for infrequent access
+- free up premium storage
+- secure so any personal data can be stored
+- it is a blob storage, so tools that apply to Blobs
+are used with Archive storage
+
 ## 6. Database
 
 ## 7. Authentication and Authorization
