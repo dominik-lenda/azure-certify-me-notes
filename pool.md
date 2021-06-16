@@ -378,19 +378,40 @@ you have more control; IoT Central uses it
 - Azure Sphere   
 gives layers of protection
 
-### 
+---Day 3---
 
+### Analytics
+- Azure HDInsight  
+Supports open-source bigdata frameowkrs such as Hadoop. Spark, etc.
 
+- Azure Databricks  
+a more user-friendly
 
+- Azure Synapse Analytics  
+more integration, combines data warehouse func with
+Apache Spark support
 
+### AI (machine learning)  
+learning; training the model to make a prediction
 
+- Azure Cognitive Services  
+a collection of ready-to-use AI tools; you can add it
+to applications without extensive knowledge of AI;
+five categories: decision, language, speech, vision, web search;
 
+- Azure Bot Service
 
+- Azure Machine Learning Studio  
+build, train ML models without coding  
 
+- Azure Machine Learning Services  
+fine-grained control; etc. train models 
+using Azure Databricks, deploy with Azure Kubernetes Service; the best solution if you want to build your own custom AI app;
 
+### Integration
 
-
-#### Compute
+- Azure Logic Apps and Azure Event Grid  
+can create complex workflows using many 3-party apps;
 
 
 # A Cloud Guru
