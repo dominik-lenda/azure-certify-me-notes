@@ -229,9 +229,9 @@ from on-premise to virtual
 IaaS
 
 - Azure App Service - PaaS  
-but... if it's not a mobile or web app then cannot use AAS
+but... if it's not a mobile or web app then cannot use Azure App Service
 
-- Azure Container Instance  
+- Azure Container Instances  
 self-contain software env e.g., complete app + all dependencies  
 containers are like VMs but they don't include OS
 use Azure Container Instance to run container using a single command
@@ -247,6 +247,26 @@ something like Azure Apps but you use to do single task and you pay only when it
 - Azure Blob Storage  
 object storage; collection of files; no hierarchical folder structure; it's flat, for videos, images, etc.
 HOT (frequent), COOL (infrequent), ARCHIVE (backup, lowest cost)  
+
+- Hot - optimized for frequently accessed data,  
+from docs  
+    "Data that's in active use or is expected to be read from and written to frequently
+    Data that's staged for processing and eventual migration to the cool access tier"
+
+- Cool - optimized for infrequently accessed data, stored for at least 30 days,  
+from docs  
+    Short-term backup and disaster recovery
+    Older data not used frequently but expected to be available immediately when accessed
+    Large data sets that need to be stored cost effectively, while more data is being gathered for future processing
+  
+- Archive - optimized rarely accessed and stored for at least 180 days   
+from Azure Docs  
+"
+    Long-term backup, secondary backup, and archival datasets
+    Original (raw) data that must be preserved, even after it has been processed into final usable form
+    Compliance and archival data that needs to be stored for a long time and is hardly ever accessed
+"
+
 if you need hierarchical file storage
 
 - Azure File Storage  
@@ -409,9 +429,77 @@ fine-grained control; etc. train models
 using Azure Databricks, deploy with Azure Kubernetes Service; the best solution if you want to build your own custom AI app;
 
 ### Integration
-
 - Azure Logic Apps and Azure Event Grid  
 can create complex workflows using many 3-party apps;
+
+### Designing a Solution
+Azure Architecture Center has many examples
+This time the example of e-commerce app
+Seriously, it is so cheap!
+
+### Managing Services
+**What are the differences between Azure Machine Learning Studio and Azure Cognitive Services?**
+
+**Learn more about managing services**
+What is Azure Service Health, informs about problems with Azure platofrm itself and upcoming maaintananc events
+resource hygiene  - how secure resources are based on Azure security best pratices
+
+I Building a solution II Maintaining a solution securly is a different story
+
+- Azure Monitor  
+a collection of monitoring apps: Application Insights - monitoring a state of app, Log Analytics - lets run complex queries, Metrics and Alerts - statistics of CPU, etc, send an alert if one statistics is too high
+
+- Azure Backup  
+Good to have backups in case of problems;
+Azure Backup is linked with VMs; so it looks like IaaS thing; many Azure services has its own backup utilities;
+even on-premise can use it (sounds quite complex thing to do)
+
+- Azure Advisor  
+It helps to find valuable information about a state of resources or helps to keep security issues in tact; high-level app. It provides security recommendations.
+
+- Azure Security Center  
+More information about security than Azure Advisor. Gives security recommendations. It uses other services such as Azure Advanced Threat Protection, Azure Policy.
+
+- ARM Template  
+a templates to easily reproduce given solution; create and manage resources automatically; you can specify configuration.
+
+- Azure Blueprints
+Automate deployment of all Azure enviroments, so it automates collections of ARM templates and other stuff like policy and user permissions.
+
+### Summary 
+Azure is a collection of online services that organizations can use to build, host, and deliver applications and it runs it on Microsoft's data centers all around the world.
+
+- Compute  
+Virtual Machines, Azure App Service, Azure Kubernetes Service, Azure Functions
+- Storage  
+Raw storage: Azure Blob Storage, Azure File Storage, Azure Data Lake Storage Gen2  
+Relational DBs: Azure SQL Database, Azure DB for MySQL, Azure DB for MariaDB, Azure DB for PostgreSQL  
+NoSQL DBs: Azure CosmosDB, Azure Cache for Redis  
+- Networking  
+VNet, VNet Peering, Azure VPN, Azur ExpressRoute   
+- Migration  
+Azure Migrate, Azure Active Directory  
+- DevOps
+Azure DevOps, Azure DevTest Labs, Azure CDN  
+- IoT  
+Azure IoT, Azure IoT Hub, Azure Sphere    
+- Analytics  
+Azure Databrics, Azure Synapse Analytics
+- AI 
+Azure Cognitive Services, Azure Bot Service, Azure Machine Learning Studio, Azure Machine Learning Services    
+- Integration  
+Azure Logic Apps  
+- Management  
+Azure Monitor, Azure Security Center, ARM Templates, Azure Blueprints
+
+Ways to access Azure:
+- Azure Portal, CLI, PowerShell, SDK, mobile app.
+
+Billing_Account(Subscriptions(Resource_Groups(Resources)))
+
+Regions contain multiple data centers, regions that has availability zones may spread VMs across availability zone.
+
+
 
 
 # A Cloud Guru
